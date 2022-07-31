@@ -267,6 +267,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\MyAuthorization.cs" />
+    <Compile Include="Security\MyRoles.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -305,12 +306,13 @@
     <Content Include="Views\Helps\Clothes.cshtml" />
     <Content Include="Views\Helps\Financial_Support.cshtml" />
     <Content Include="Views\Helps\Shelter.cshtml" />
-    <Content Include="Views\Helps\Street_Animal.cshtml" />
     <Content Include="Views\Helps\Education.cshtml" />
-    <Content Include="Views\Helps\Business_Help.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Helps\Business_Help.cshtml" />
+    <Content Include="Views\Helps\Street_Animal_Support.cshtml" />
+    <Content Include="Views\Event\EventDetail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
