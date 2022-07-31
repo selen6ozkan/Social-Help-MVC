@@ -27,7 +27,7 @@ namespace WebApplication8.Controllers
             users_table user = db.users_table.FirstOrDefault(x => x.user_mail == u.user_mail && x.user_password == u.user_password);
             if (user != null)
             {
-                FormsAuthentication.SetAuthCookie(user.user_name, false);
+                FormsAuthentication.SetAuthCookie(user.user_mail, false);
                 return RedirectToAction("Index", "Home");
             }
             else

@@ -13,6 +13,7 @@ namespace WebApplication8.Controllers
         welfareDBEntities db=new welfareDBEntities();   
         [HttpGet]
         [Authorize(Roles = "ADMIN,KULLANICI")]
+        [AllowAnonymous]
         public ActionResult Index()
         {
             List<events_table> list1 =db.events_table.ToList();
