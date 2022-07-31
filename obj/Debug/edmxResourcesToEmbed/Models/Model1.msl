@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="welfareDBModelStoreContainer" CdmEntityContainer="welfareDBEntities">
+    <EntitySetMapping Name="address_table">
+      <EntityTypeMapping TypeName="welfareDBModel.address_table">
+        <MappingFragment StoreEntitySet="address_table">
+          <ScalarProperty Name="address_id" ColumnName="address_id" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="neighbourhood" ColumnName="neighbourhood" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="building_no" ColumnName="building_no" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="adverts_table">
+      <EntityTypeMapping TypeName="welfareDBModel.adverts_table">
+        <MappingFragment StoreEntitySet="adverts_table">
+          <ScalarProperty Name="advert_id" ColumnName="advert_id" />
+          <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="blood_donation_table">
+      <EntityTypeMapping TypeName="welfareDBModel.blood_donation_table">
+        <MappingFragment StoreEntitySet="blood_donation_table">
+          <ScalarProperty Name="blood_donation_id" ColumnName="blood_donation_id" />
+          <ScalarProperty Name="blood_donation_title" ColumnName="blood_donation_title" />
+          <ScalarProperty Name="blood_donation_content" ColumnName="blood_donation_content" />
+          <ScalarProperty Name="blood_donation_date" ColumnName="blood_donation_date" />
+          <ScalarProperty Name="blood_donation_status" ColumnName="blood_donation_status" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="business_help_table">
+      <EntityTypeMapping TypeName="welfareDBModel.business_help_table">
+        <MappingFragment StoreEntitySet="business_help_table">
+          <ScalarProperty Name="business_help_id" ColumnName="business_help_id" />
+          <ScalarProperty Name="business_help_title" ColumnName="business_help_title" />
+          <ScalarProperty Name="business_help_content" ColumnName="business_help_content" />
+          <ScalarProperty Name="business_help_date" ColumnName="business_help_date" />
+          <ScalarProperty Name="business_help_status" ColumnName="business_help_status" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clothes_table">
+      <EntityTypeMapping TypeName="welfareDBModel.clothes_table">
+        <MappingFragment StoreEntitySet="clothes_table">
+          <ScalarProperty Name="clothes_id" ColumnName="clothes_id" />
+          <ScalarProperty Name="clothes_title" ColumnName="clothes_title" />
+          <ScalarProperty Name="clothes_content" ColumnName="clothes_content" />
+          <ScalarProperty Name="clothes_date" ColumnName="clothes_date" />
+          <ScalarProperty Name="clothes_status" ColumnName="clothes_status" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="education_table">
+      <EntityTypeMapping TypeName="welfareDBModel.education_table">
+        <MappingFragment StoreEntitySet="education_table">
+          <ScalarProperty Name="education_id" ColumnName="education_id" />
+          <ScalarProperty Name="education_title" ColumnName="education_title" />
+          <ScalarProperty Name="education_content" ColumnName="education_content" />
+          <ScalarProperty Name="education_date" ColumnName="education_date" />
+          <ScalarProperty Name="education_status" ColumnName="education_status" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="events_table">
+      <EntityTypeMapping TypeName="welfareDBModel.events_table">
+        <MappingFragment StoreEntitySet="events_table">
+          <ScalarProperty Name="events_id" ColumnName="events_id" />
+          <ScalarProperty Name="events_title" ColumnName="events_title" />
+          <ScalarProperty Name="events_content" ColumnName="events_content" />
+          <ScalarProperty Name="events_date" ColumnName="events_date" />
+          <ScalarProperty Name="events_status" ColumnName="events_status" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="financial_support_table">
+      <EntityTypeMapping TypeName="welfareDBModel.financial_support_table">
+        <MappingFragment StoreEntitySet="financial_support_table">
+          <ScalarProperty Name="financial_support_id" ColumnName="financial_support_id" />
+          <ScalarProperty Name="financial_support_title" ColumnName="financial_support_title" />
+          <ScalarProperty Name="financial_support_content" ColumnName="financial_support_content" />
+          <ScalarProperty Name="financial_support_date" ColumnName="financial_support_date" />
+          <ScalarProperty Name="financial_support_status" ColumnName="financial_support_status" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="help_type_table">
+      <EntityTypeMapping TypeName="welfareDBModel.help_type_table">
+        <MappingFragment StoreEntitySet="help_type_table">
+          <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+          <ScalarProperty Name="help_type" ColumnName="help_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shelter_table">
+      <EntityTypeMapping TypeName="welfareDBModel.shelter_table">
+        <MappingFragment StoreEntitySet="shelter_table">
+          <ScalarProperty Name="shelter_id" ColumnName="shelter_id" />
+          <ScalarProperty Name="shelter_title" ColumnName="shelter_title" />
+          <ScalarProperty Name="shelter_content" ColumnName="shelter_content" />
+          <ScalarProperty Name="shelter_date" ColumnName="shelter_date" />
+          <ScalarProperty Name="shelter_status" ColumnName="shelter_status" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stationary_table">
+      <EntityTypeMapping TypeName="welfareDBModel.stationary_table">
+        <MappingFragment StoreEntitySet="stationary_table">
+          <ScalarProperty Name="stationary_id" ColumnName="stationary_id" />
+          <ScalarProperty Name="stationary_title" ColumnName="stationary_title" />
+          <ScalarProperty Name="stationary_content" ColumnName="stationary_content" />
+          <ScalarProperty Name="stationary_date" ColumnName="stationary_date" />
+          <ScalarProperty Name="stationary_status" ColumnName="stationary_status" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="street_animal_table">
+      <EntityTypeMapping TypeName="welfareDBModel.street_animal_table">
+        <MappingFragment StoreEntitySet="street_animal_table">
+          <ScalarProperty Name="street_animal_id" ColumnName="street_animal_id" />
+          <ScalarProperty Name="street_animal_title" ColumnName="street_animal_title" />
+          <ScalarProperty Name="street_animal_content" ColumnName="street_animal_content" />
+          <ScalarProperty Name="street_animal_date" ColumnName="street_animal_date" />
+          <ScalarProperty Name="street_animal_status" ColumnName="street_animal_status" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="supply_table">
+      <EntityTypeMapping TypeName="welfareDBModel.supply_table">
+        <MappingFragment StoreEntitySet="supply_table">
+          <ScalarProperty Name="supply_id" ColumnName="supply_id" />
+          <ScalarProperty Name="supply_title" ColumnName="supply_title" />
+          <ScalarProperty Name="supply_content" ColumnName="supply_content" />
+          <ScalarProperty Name="supply_date" ColumnName="supply_date" />
+          <ScalarProperty Name="supply_status" ColumnName="supply_status" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_role_mapping">
+      <EntityTypeMapping TypeName="welfareDBModel.user_role_mapping">
+        <MappingFragment StoreEntitySet="user_role_mapping">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_type_id" ColumnName="user_type_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_type_table">
+      <EntityTypeMapping TypeName="welfareDBModel.user_type_table">
+        <MappingFragment StoreEntitySet="user_type_table">
+          <ScalarProperty Name="user_type_id" ColumnName="user_type_id" />
+          <ScalarProperty Name="user_type" ColumnName="user_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users_table">
+      <EntityTypeMapping TypeName="welfareDBModel.users_table">
+        <MappingFragment StoreEntitySet="users_table">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="user_mail" ColumnName="user_mail" />
+          <ScalarProperty Name="user_password" ColumnName="user_password" />
+          <ScalarProperty Name="user_phone" ColumnName="user_phone" />
+          <ScalarProperty Name="user_gender" ColumnName="user_gender" />
+          <ScalarProperty Name="user_age" ColumnName="user_age" />
+          <ScalarProperty Name="user_type_id" ColumnName="user_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
