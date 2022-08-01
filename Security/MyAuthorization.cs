@@ -16,7 +16,7 @@ namespace WebApplication8.Security
             }
             else
             {
-                filterContext.Result = new RedirectResult("/Home/Index");
+                filterContext.Result = new RedirectResult("/Home/Error");
             }
         }
     }

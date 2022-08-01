@@ -15,7 +15,7 @@
                     <li class="breadcrumb-link">
                         <a href="index.html"><i class="fas fa-home mr-2"></i>Anasayfa</a>
                     </li>
-                    <li class="breadcrumb-link active">Hoşgeldiniz</li>
+                    <li class="breadcrumb-link active">@HttpContext.Current.User.Identity.Name</li>
                 </ul>
             </div>
         </div>
@@ -29,7 +29,7 @@
             <div class="card-header">
                 <span class="img-thumb">
                     <img src="~/Content/image/world.png" alt=" " />
-                    <span class="ml-2 fa-2x">Sosyal Yardımlaşma ve Dayanışma Patformumuza Hoşgeldiniz</span>
+                    <span class="ml-2 fa-2x">Hoşgeldiniz , @HttpContext.Current.User.Identity.Name</span>
                 </span>
             </div>
           

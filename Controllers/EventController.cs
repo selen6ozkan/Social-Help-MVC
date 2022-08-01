@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication8.Models;
+using WebApplication8.Security;
 
 namespace WebApplication8.Controllers
 {
@@ -16,29 +17,34 @@ namespace WebApplication8.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
-            List<events_table> list1 =db.events_table.ToList();
+            List<events_table> events =db.events_table.ToList();
             List<users_table> list2 = db.users_table.ToList();
-            ViewBag.user = list2;
-            return View(list1);
+           
+            return View(events);
         }
-        [HttpGet]
-        [Authorize(Roles = "ADMIN")]
-        public ActionResult EventDetail(int id)
+        
+
+        [MyAuthorization(Roles = "ADMIN,KULLANICI")]
+        [AllowAnonymous]
+        public ActionResult EventDetail(int? id)
         {
             events_table e = db.events_table.FirstOrDefault(x => x.events_id == id);
 
             return View(e);
         }
+
         [HttpPost]
+        [Authorize(Roles = "ADMIN,KULLANICI")]
+        [AllowAnonymous]
         public ActionResult EventDetail(events_table e)
         {
             events_table events = db.events_table.FirstOrDefault(x => x.events_id == e.events_id);
 
             return RedirectToAction("Index");
         }
+        [HttpGet]
 
-
-        [Authorize(Roles = "ADMIN")]
+        [MyAuthorization(Roles = "ADMIN")]
         public ActionResult EventDelete(int id)
         {
             //events_table s = n.events_table.FirstOrDefault(x => x.events_id == id);
@@ -48,12 +54,31 @@ namespace WebApplication8.Controllers
         public ActionResult EventDelete(events_table s)
         {
             events_table events = db.events_table.FirstOrDefault(x => x.events_id == s.events_id);
+            
             //db.events_table.Remove(events);
             //db.SaveChanges();
 
             return RedirectToAction("Index");
         }
 
-
+        public ActionResult EventAdd()
+        {
+           ViewBag.events=db.events_table.ToList();
+           
+            return View();
+        }
+        [HttpPost]
+        
+        public ActionResult EventAdd(events_table e, string user_name)
+        {
+            users_table u = db.users_table.FirstOrDefault(x=>x.user_name == user_name);
+            e.events_status = "Beklemede";
+            e.events_date = DateTime.Now;
+            e.user_id = u.user_id;
+            db.events_table.Add(e); 
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        
     }
 } 

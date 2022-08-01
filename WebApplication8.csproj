@@ -313,6 +313,9 @@
     <Content Include="Views\Helps\Business_Help.cshtml" />
     <Content Include="Views\Helps\Street_Animal_Support.cshtml" />
     <Content Include="Views\Event\EventDetail.cshtml" />
+    <Content Include="Views\Event\EventAdd.cshtml" />
+    <Content Include="Views\Adverts\AdvertAdd.cshtml" />
+    <Content Include="Views\Event\EventDelete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

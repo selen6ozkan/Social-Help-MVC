@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "EventAdd";
+}
+
+
+<div class="row">
+    <div class="colxl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-title-wrapper">
+            <div class="page-title-box">
+                <h4 class="page-title">Etkinlik Paylaş</h4>
+            </div>
+            <div class="breadcrumb-list">
+                <ul>
+                    <li class="breadcrumb-link">
+                        <a href="index.html"><i class="fas fa-home mr-2"></i>Anasayfa</a>
+                    </li>
+                    <li class="breadcrumb-link active">Etkinlik Paylaş</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>@HttpContext.Current.User.Identity.Name</h3>
+        
+    </div>
+   
+    <div class="card-body">
+        <form action="/Event/EventAdd" method="post" role="form">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="form-group">
+                    <label class="col-form-label">BaşlıK</label>
+                    <input class="form-control" type="text" placeholder="Etkinlik Başlığı" name="events_title">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">İçerik</label>
+                    <input class="form-control" type="text" placeholder="Etkinlik İçeriği" name="events_content">
+                </div>
+
+                <div class="form-group">
+                    
+                    <input class="form-control" type="hidden" placeholder="Etkinlik İçeriği" name="user_name" value="@HttpContext.Current.User.Identity.Name">
+                </div>
+
+                <div class="form-group mb-0">
+                    <button type="submit" class="btn btn-primary">Urun Ekle</button>
+
+                    <a href="/Event/Index" class="btn btn-light" data-bs-dismiss="modal">İptal</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

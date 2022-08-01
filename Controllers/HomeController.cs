@@ -24,10 +24,10 @@ namespace WebApplication8.Controllers
         public ActionResult Login(users_table u)
         {
             welfareDBEntities db = new welfareDBEntities();
-            users_table user = db.users_table.FirstOrDefault(x => x.user_mail == u.user_mail && x.user_password == u.user_password);
+            users_table user = db.users_table.FirstOrDefault(x => x.user_name == u.user_name && x.user_password == u.user_password);
             if (user != null)
             {
-                FormsAuthentication.SetAuthCookie(user.user_mail, false);
+                FormsAuthentication.SetAuthCookie(user.user_name, false);
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -50,7 +50,7 @@ namespace WebApplication8.Controllers
 
         }
 
-        public ActionResult Hata()
+        public ActionResult Error()
         {
             return View();
         }
