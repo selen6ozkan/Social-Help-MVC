@@ -17,7 +17,6 @@ namespace WebApplication8.Models
         public int financial_support_id { get; set; }
         public string financial_support_title { get; set; }
         public string financial_support_content { get; set; }
-        public System.DateTime financial_support_date { get; set; }
         public string financial_support_status { get; set; }
         public int user_id { get; set; }
         public int help_type_id { get; set; }

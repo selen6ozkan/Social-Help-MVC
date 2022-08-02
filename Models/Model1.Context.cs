@@ -12,11 +12,13 @@ namespace WebApplication8.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
-    public partial class welfareDBEntities : DbContext
+    public partial class welfareDBEntities1 : DbContext
     {
-        public welfareDBEntities()
-            : base("name=welfareDBEntities")
+        public welfareDBEntities1()
+            : base("name=welfareDBEntities1")
         {
         }
     
@@ -41,5 +43,14 @@ namespace WebApplication8.Models
         public virtual DbSet<user_role_mapping> user_role_mapping { get; set; }
         public virtual DbSet<user_type_table> user_type_table { get; set; }
         public virtual DbSet<users_table> users_table { get; set; }
+    
+        public virtual ObjectResult<string> getRoles(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("getRoles", idParameter);
+        }
     }
 }

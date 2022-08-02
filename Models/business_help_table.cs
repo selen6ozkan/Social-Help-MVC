@@ -17,7 +17,6 @@ namespace WebApplication8.Models
         public int business_help_id { get; set; }
         public string business_help_title { get; set; }
         public string business_help_content { get; set; }
-        public System.DateTime business_help_date { get; set; }
         public string business_help_status { get; set; }
         public int user_id { get; set; }
         public int help_type_id { get; set; }

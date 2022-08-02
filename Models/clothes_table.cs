@@ -17,7 +17,6 @@ namespace WebApplication8.Models
         public int clothes_id { get; set; }
         public string clothes_title { get; set; }
         public string clothes_content { get; set; }
-        public System.DateTime clothes_date { get; set; }
         public string clothes_status { get; set; }
         public int user_id { get; set; }
         public int help_type_id { get; set; }

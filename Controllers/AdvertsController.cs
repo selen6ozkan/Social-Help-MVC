@@ -9,7 +9,7 @@ namespace WebApplication8.Controllers
 {
     public class AdvertsController : Controller
     {
-        welfareDBEntities db = new welfareDBEntities();
+        welfareDBEntities1 db = new welfareDBEntities1();
         // GET: Adverts
         [HttpGet]
         [Authorize(Roles = "ADMIN,KULLANICI")]

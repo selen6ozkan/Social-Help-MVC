@@ -17,7 +17,6 @@ namespace WebApplication8.Models
         public int stationary_id { get; set; }
         public string stationary_title { get; set; }
         public string stationary_content { get; set; }
-        public System.DateTime stationary_date { get; set; }
         public string stationary_status { get; set; }
         public int user_id { get; set; }
         public int help_type_id { get; set; }

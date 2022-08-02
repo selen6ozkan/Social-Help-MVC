@@ -23,7 +23,7 @@ namespace WebApplication8.Controllers
      
         public ActionResult Login(users_table u)
         {
-            welfareDBEntities db = new welfareDBEntities();
+            welfareDBEntities1 db = new welfareDBEntities1();
             users_table user = db.users_table.FirstOrDefault(x => x.user_name == u.user_name && x.user_password == u.user_password);
             if (user != null)
             {

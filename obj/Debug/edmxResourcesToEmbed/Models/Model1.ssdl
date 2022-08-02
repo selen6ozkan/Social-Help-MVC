@@ -26,7 +26,6 @@
     <Property Name="blood_donation_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="blood_donation_title" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="blood_donation_content" Type="varchar" MaxLength="500" Nullable="false" />
-    <Property Name="blood_donation_date" Type="datetime" Nullable="false" />
     <Property Name="blood_donation_status" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="user_id" Type="int" Nullable="false" />
     <Property Name="help_type_id" Type="int" Nullable="false" />
@@ -38,7 +37,6 @@
     <Property Name="business_help_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="business_help_title" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="business_help_content" Type="varchar" MaxLength="500" Nullable="false" />
-    <Property Name="business_help_date" Type="datetime" Nullable="false" />
     <Property Name="business_help_status" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="user_id" Type="int" Nullable="false" />
     <Property Name="help_type_id" Type="int" Nullable="false" />
@@ -50,7 +48,6 @@
     <Property Name="clothes_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="clothes_title" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="clothes_content" Type="varchar" MaxLength="500" Nullable="false" />
-    <Property Name="clothes_date" Type="datetime" Nullable="false" />
     <Property Name="clothes_status" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="user_id" Type="int" Nullable="false" />
     <Property Name="help_type_id" Type="int" Nullable="false" />
@@ -62,7 +59,6 @@
     <Property Name="education_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="education_title" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="education_content" Type="varchar" MaxLength="500" Nullable="false" />
-    <Property Name="education_date" Type="datetime" Nullable="false" />
     <Property Name="education_status" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="user_id" Type="int" Nullable="false" />
     <Property Name="help_type_id" Type="int" Nullable="false" />
@@ -73,11 +69,11 @@
     </Key>
     <Property Name="events_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="events_title" Type="varchar" MaxLength="250" Nullable="false" />
-    <Property Name="events_content" Type="varchar" MaxLength="500" Nullable="false" />
-    <Property Name="events_date" Type="datetime" Nullable="false" />
-    <Property Name="events_status" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="user_id" Type="int" Nullable="false" />
-    <Property Name="help_type_id" Type="int" Nullable="false" />
+    <Property Name="events_content" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="events_date" Type="date" Nullable="false" />
+    <Property Name="event_status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="help_type_id" Type="int" />
   </EntityType>
   <EntityType Name="financial_support_table">
     <Key>
@@ -86,7 +82,6 @@
     <Property Name="financial_support_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="financial_support_title" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="financial_support_content" Type="varchar" MaxLength="500" Nullable="false" />
-    <Property Name="financial_support_date" Type="datetime" Nullable="false" />
     <Property Name="financial_support_status" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="user_id" Type="int" Nullable="false" />
     <Property Name="help_type_id" Type="int" Nullable="false" />
@@ -104,8 +99,7 @@
     </Key>
     <Property Name="shelter_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="shelter_title" Type="varchar" MaxLength="250" Nullable="false" />
-    <Property Name="shelter_content" Type="varchar" MaxLength="500" Nullable="false" />
-    <Property Name="shelter_date" Type="datetime" Nullable="false" />
+    <Property Name="shelter_content" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="shelter_status" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="user_id" Type="int" Nullable="false" />
     <Property Name="help_type_id" Type="int" Nullable="false" />
@@ -117,7 +111,6 @@
     <Property Name="stationary_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="stationary_title" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="stationary_content" Type="varchar" MaxLength="500" Nullable="false" />
-    <Property Name="stationary_date" Type="datetime" Nullable="false" />
     <Property Name="stationary_status" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="user_id" Type="int" Nullable="false" />
     <Property Name="help_type_id" Type="int" Nullable="false" />
@@ -129,7 +122,6 @@
     <Property Name="street_animal_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="street_animal_title" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="street_animal_content" Type="varchar" MaxLength="500" Nullable="false" />
-    <Property Name="street_animal_date" Type="datetime" Nullable="false" />
     <Property Name="street_animal_status" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="user_id" Type="int" Nullable="false" />
     <Property Name="help_type_id" Type="int" Nullable="false" />
@@ -141,7 +133,6 @@
     <Property Name="supply_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="supply_title" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="supply_content" Type="varchar" MaxLength="500" Nullable="false" />
-    <Property Name="supply_date" Type="datetime" Nullable="false" />
     <Property Name="supply_status" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="user_id" Type="int" Nullable="false" />
     <Property Name="help_type_id" Type="int" Nullable="false" />
@@ -294,8 +285,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__events_ta__help___4222D4EF">
-    <End Role="help_type_table" Type="Self.help_type_table" Multiplicity="1" />
+  <Association Name="FK__events_ta__help___0E6E26BF">
+    <End Role="help_type_table" Type="Self.help_type_table" Multiplicity="0..1" />
     <End Role="events_table" Type="Self.events_table" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="help_type_table">
@@ -306,8 +297,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__events_ta__user___412EB0B6">
-    <End Role="users_table" Type="Self.users_table" Multiplicity="1" />
+  <Association Name="FK__events_ta__user___0D7A0286">
+    <End Role="users_table" Type="Self.users_table" Multiplicity="0..1" />
     <End Role="events_table" Type="Self.events_table" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="users_table">
@@ -342,7 +333,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__shelter_t__help___3A81B327">
+  <Association Name="FK__shelter_t__help___02084FDA">
     <End Role="help_type_table" Type="Self.help_type_table" Multiplicity="1" />
     <End Role="shelter_table" Type="Self.shelter_table" Multiplicity="*" />
     <ReferentialConstraint>
@@ -354,7 +345,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__shelter_t__user___398D8EEE">
+  <Association Name="FK__shelter_t__user___01142BA1">
     <End Role="users_table" Type="Self.users_table" Multiplicity="1" />
     <End Role="shelter_table" Type="Self.shelter_table" Multiplicity="*" />
     <ReferentialConstraint>
@@ -474,6 +465,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="getRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
   <EntityContainer Name="welfareDBModelStoreContainer">
     <EntitySet Name="address_table" EntityType="Self.address_table" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="adverts_table" EntityType="Self.adverts_table" Schema="dbo" store:Type="Tables" />
@@ -531,11 +525,11 @@
       <End Role="users_table" EntitySet="users_table" />
       <End Role="education_table" EntitySet="education_table" />
     </AssociationSet>
-    <AssociationSet Name="FK__events_ta__help___4222D4EF" Association="Self.FK__events_ta__help___4222D4EF">
+    <AssociationSet Name="FK__events_ta__help___0E6E26BF" Association="Self.FK__events_ta__help___0E6E26BF">
       <End Role="help_type_table" EntitySet="help_type_table" />
       <End Role="events_table" EntitySet="events_table" />
     </AssociationSet>
-    <AssociationSet Name="FK__events_ta__user___412EB0B6" Association="Self.FK__events_ta__user___412EB0B6">
+    <AssociationSet Name="FK__events_ta__user___0D7A0286" Association="Self.FK__events_ta__user___0D7A0286">
       <End Role="users_table" EntitySet="users_table" />
       <End Role="events_table" EntitySet="events_table" />
     </AssociationSet>
@@ -547,11 +541,11 @@
       <End Role="users_table" EntitySet="users_table" />
       <End Role="financial_support_table" EntitySet="financial_support_table" />
     </AssociationSet>
-    <AssociationSet Name="FK__shelter_t__help___3A81B327" Association="Self.FK__shelter_t__help___3A81B327">
+    <AssociationSet Name="FK__shelter_t__help___02084FDA" Association="Self.FK__shelter_t__help___02084FDA">
       <End Role="help_type_table" EntitySet="help_type_table" />
       <End Role="shelter_table" EntitySet="shelter_table" />
     </AssociationSet>
-    <AssociationSet Name="FK__shelter_t__user___398D8EEE" Association="Self.FK__shelter_t__user___398D8EEE">
+    <AssociationSet Name="FK__shelter_t__user___01142BA1" Association="Self.FK__shelter_t__user___01142BA1">
       <End Role="users_table" EntitySet="users_table" />
       <End Role="shelter_table" EntitySet="shelter_table" />
     </AssociationSet>

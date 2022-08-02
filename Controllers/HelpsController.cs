@@ -9,7 +9,7 @@ namespace WebApplication8.Controllers
 {
     public class HelpsController : Controller
     {
-        welfareDBEntities db = new welfareDBEntities();
+        welfareDBEntities1 db = new welfareDBEntities1();
         // GET: Helps
         public ActionResult Index()
         {

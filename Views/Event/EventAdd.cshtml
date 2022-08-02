@@ -39,14 +39,20 @@
                     <label class="col-form-label">İçerik</label>
                     <input class="form-control" type="text" placeholder="Etkinlik İçeriği" name="events_content">
                 </div>
+                <div class="form-group">
+                    <label class="col-form-label">Tarih</label>
+                    <input class="form-control" type="date" placeholder="Etkinlik İçeriği" name="events_date">
+                </div>
+
+               
 
                 <div class="form-group">
-                    
+
                     <input class="form-control" type="hidden" placeholder="Etkinlik İçeriği" name="user_name" value="@HttpContext.Current.User.Identity.Name">
                 </div>
 
                 <div class="form-group mb-0">
-                    <button type="submit" class="btn btn-primary">Urun Ekle</button>
+                    <button type="submit" class="btn btn-primary">Etkinlik Paylaş</button>
 
                     <a href="/Event/Index" class="btn btn-light" data-bs-dismiss="modal">İptal</a>
                 </div>

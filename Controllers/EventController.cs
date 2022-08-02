@@ -11,7 +11,7 @@ namespace WebApplication8.Controllers
     public class EventController : Controller
     {
         // GET: Event
-        welfareDBEntities db=new welfareDBEntities();   
+        welfareDBEntities1 db=new welfareDBEntities1();   
         [HttpGet]
         [Authorize(Roles = "ADMIN,KULLANICI")]
         [AllowAnonymous]
@@ -69,14 +69,15 @@ namespace WebApplication8.Controllers
         }
         [HttpPost]
         
-        public ActionResult EventAdd(events_table e, string user_name)
+        public ActionResult EventAdd(events_table e, string user_name,int? events_id)
         {
             users_table u = db.users_table.FirstOrDefault(x=>x.user_name == user_name);
-            e.events_status = "Beklemede";
-            e.events_date = DateTime.Now;
+            events_table ev = db.events_table.FirstOrDefault(x => x.events_id == events_id);
+            e.event_status = "Beklemede";
             e.user_id = u.user_id;
-            db.events_table.Add(e); 
-            db.SaveChanges();
+          
+            db.events_table.Add(e);
+            _ = db.SaveChanges();
             return RedirectToAction("Index");
         }
         

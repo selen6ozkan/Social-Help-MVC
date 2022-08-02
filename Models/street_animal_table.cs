@@ -17,7 +17,6 @@ namespace WebApplication8.Models
         public int street_animal_id { get; set; }
         public string street_animal_title { get; set; }
         public string street_animal_content { get; set; }
-        public System.DateTime street_animal_date { get; set; }
         public string street_animal_status { get; set; }
         public int user_id { get; set; }
         public int help_type_id { get; set; }

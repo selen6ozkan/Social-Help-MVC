@@ -28,7 +28,6 @@
     <Property Name="blood_donation_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="blood_donation_title" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="blood_donation_content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="blood_donation_date" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="blood_donation_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="help_type_id" Type="Int32" Nullable="false" />
@@ -42,7 +41,6 @@
     <Property Name="business_help_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="business_help_title" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="business_help_content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="business_help_date" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="business_help_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="help_type_id" Type="Int32" Nullable="false" />
@@ -56,7 +54,6 @@
     <Property Name="clothes_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="clothes_title" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="clothes_content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="clothes_date" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="clothes_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="help_type_id" Type="Int32" Nullable="false" />
@@ -70,7 +67,6 @@
     <Property Name="education_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="education_title" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="education_content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="education_date" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="education_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="help_type_id" Type="Int32" Nullable="false" />
@@ -83,13 +79,13 @@
     </Key>
     <Property Name="events_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="events_title" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="events_content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="events_date" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="events_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="user_id" Type="Int32" Nullable="false" />
-    <Property Name="help_type_id" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="help_type_table" Relationship="Self.FK__events_ta__help___4222D4EF" FromRole="events_table" ToRole="help_type_table" />
-    <NavigationProperty Name="users_table" Relationship="Self.FK__events_ta__user___412EB0B6" FromRole="events_table" ToRole="users_table" />
+    <Property Name="events_content" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="events_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="event_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="help_type_id" Type="Int32" />
+    <NavigationProperty Name="help_type_table" Relationship="Self.FK__events_ta__help___0E6E26BF" FromRole="events_table" ToRole="help_type_table" />
+    <NavigationProperty Name="users_table" Relationship="Self.FK__events_ta__user___0D7A0286" FromRole="events_table" ToRole="users_table" />
   </EntityType>
   <EntityType Name="financial_support_table">
     <Key>
@@ -98,7 +94,6 @@
     <Property Name="financial_support_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="financial_support_title" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="financial_support_content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="financial_support_date" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="financial_support_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="help_type_id" Type="Int32" Nullable="false" />
@@ -116,9 +111,9 @@
     <NavigationProperty Name="business_help_table" Relationship="Self.FK__business___help___4D94879B" FromRole="help_type_table" ToRole="business_help_table" />
     <NavigationProperty Name="clothes_table" Relationship="Self.FK__clothes_t__help___49C3F6B7" FromRole="help_type_table" ToRole="clothes_table" />
     <NavigationProperty Name="education_table" Relationship="Self.FK__education__help___45F365D3" FromRole="help_type_table" ToRole="education_table" />
-    <NavigationProperty Name="events_table" Relationship="Self.FK__events_ta__help___4222D4EF" FromRole="help_type_table" ToRole="events_table" />
+    <NavigationProperty Name="events_table" Relationship="Self.FK__events_ta__help___0E6E26BF" FromRole="help_type_table" ToRole="events_table" />
     <NavigationProperty Name="financial_support_table" Relationship="Self.FK__financial__help___3E52440B" FromRole="help_type_table" ToRole="financial_support_table" />
-    <NavigationProperty Name="shelter_table" Relationship="Self.FK__shelter_t__help___3A81B327" FromRole="help_type_table" ToRole="shelter_table" />
+    <NavigationProperty Name="shelter_table" Relationship="Self.FK__shelter_t__help___02084FDA" FromRole="help_type_table" ToRole="shelter_table" />
     <NavigationProperty Name="stationary_table" Relationship="Self.FK__stationar__help___36B12243" FromRole="help_type_table" ToRole="stationary_table" />
     <NavigationProperty Name="street_animal_table" Relationship="Self.FK__street_an__help___32E0915F" FromRole="help_type_table" ToRole="street_animal_table" />
     <NavigationProperty Name="supply_table" Relationship="Self.FK__supply_ta__help___2F10007B" FromRole="help_type_table" ToRole="supply_table" />
@@ -129,13 +124,12 @@
     </Key>
     <Property Name="shelter_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="shelter_title" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="shelter_content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="shelter_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="shelter_content" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="shelter_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="help_type_id" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="help_type_table" Relationship="Self.FK__shelter_t__help___3A81B327" FromRole="shelter_table" ToRole="help_type_table" />
-    <NavigationProperty Name="users_table" Relationship="Self.FK__shelter_t__user___398D8EEE" FromRole="shelter_table" ToRole="users_table" />
+    <NavigationProperty Name="help_type_table" Relationship="Self.FK__shelter_t__help___02084FDA" FromRole="shelter_table" ToRole="help_type_table" />
+    <NavigationProperty Name="users_table" Relationship="Self.FK__shelter_t__user___01142BA1" FromRole="shelter_table" ToRole="users_table" />
   </EntityType>
   <EntityType Name="stationary_table">
     <Key>
@@ -144,7 +138,6 @@
     <Property Name="stationary_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="stationary_title" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="stationary_content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="stationary_date" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="stationary_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="help_type_id" Type="Int32" Nullable="false" />
@@ -158,7 +151,6 @@
     <Property Name="street_animal_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="street_animal_title" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="street_animal_content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="street_animal_date" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="street_animal_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="help_type_id" Type="Int32" Nullable="false" />
@@ -172,7 +164,6 @@
     <Property Name="supply_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="supply_title" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="supply_content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="supply_date" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="supply_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="help_type_id" Type="Int32" Nullable="false" />
@@ -215,9 +206,9 @@
     <NavigationProperty Name="business_help_table" Relationship="Self.FK__business___user___4CA06362" FromRole="users_table" ToRole="business_help_table" />
     <NavigationProperty Name="clothes_table" Relationship="Self.FK__clothes_t__user___48CFD27E" FromRole="users_table" ToRole="clothes_table" />
     <NavigationProperty Name="education_table" Relationship="Self.FK__education__user___44FF419A" FromRole="users_table" ToRole="education_table" />
-    <NavigationProperty Name="events_table" Relationship="Self.FK__events_ta__user___412EB0B6" FromRole="users_table" ToRole="events_table" />
+    <NavigationProperty Name="events_table" Relationship="Self.FK__events_ta__user___0D7A0286" FromRole="users_table" ToRole="events_table" />
     <NavigationProperty Name="financial_support_table" Relationship="Self.FK__financial__user___3D5E1FD2" FromRole="users_table" ToRole="financial_support_table" />
-    <NavigationProperty Name="shelter_table" Relationship="Self.FK__shelter_t__user___398D8EEE" FromRole="users_table" ToRole="shelter_table" />
+    <NavigationProperty Name="shelter_table" Relationship="Self.FK__shelter_t__user___01142BA1" FromRole="users_table" ToRole="shelter_table" />
     <NavigationProperty Name="stationary_table" Relationship="Self.FK__stationar__user___35BCFE0A" FromRole="users_table" ToRole="stationary_table" />
     <NavigationProperty Name="street_animal_table" Relationship="Self.FK__street_an__user___31EC6D26" FromRole="users_table" ToRole="street_animal_table" />
     <NavigationProperty Name="supply_table" Relationship="Self.FK__supply_ta__user___2E1BDC42" FromRole="users_table" ToRole="supply_table" />
@@ -344,8 +335,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__events_ta__help___4222D4EF">
-    <End Role="help_type_table" Type="Self.help_type_table" Multiplicity="1" />
+  <Association Name="FK__events_ta__help___0E6E26BF">
+    <End Role="help_type_table" Type="Self.help_type_table" Multiplicity="0..1" />
     <End Role="events_table" Type="Self.events_table" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="help_type_table">
@@ -356,8 +347,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__events_ta__user___412EB0B6">
-    <End Role="users_table" Type="Self.users_table" Multiplicity="1" />
+  <Association Name="FK__events_ta__user___0D7A0286">
+    <End Role="users_table" Type="Self.users_table" Multiplicity="0..1" />
     <End Role="events_table" Type="Self.events_table" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="users_table">
@@ -392,7 +383,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__shelter_t__help___3A81B327">
+  <Association Name="FK__shelter_t__help___02084FDA">
     <End Role="help_type_table" Type="Self.help_type_table" Multiplicity="1" />
     <End Role="shelter_table" Type="Self.shelter_table" Multiplicity="*" />
     <ReferentialConstraint>
@@ -440,7 +431,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__shelter_t__user___398D8EEE">
+  <Association Name="FK__shelter_t__user___01142BA1">
     <End Role="users_table" Type="Self.users_table" Multiplicity="1" />
     <End Role="shelter_table" Type="Self.shelter_table" Multiplicity="*" />
     <ReferentialConstraint>
@@ -524,7 +515,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="welfareDBEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="welfareDBEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="address_table" EntityType="Self.address_table" />
     <EntitySet Name="adverts_table" EntityType="Self.adverts_table" />
     <EntitySet Name="blood_donation_table" EntityType="Self.blood_donation_table" />
@@ -581,11 +572,11 @@
       <End Role="users_table" EntitySet="users_table" />
       <End Role="education_table" EntitySet="education_table" />
     </AssociationSet>
-    <AssociationSet Name="FK__events_ta__help___4222D4EF" Association="Self.FK__events_ta__help___4222D4EF">
+    <AssociationSet Name="FK__events_ta__help___0E6E26BF" Association="Self.FK__events_ta__help___0E6E26BF">
       <End Role="help_type_table" EntitySet="help_type_table" />
       <End Role="events_table" EntitySet="events_table" />
     </AssociationSet>
-    <AssociationSet Name="FK__events_ta__user___412EB0B6" Association="Self.FK__events_ta__user___412EB0B6">
+    <AssociationSet Name="FK__events_ta__user___0D7A0286" Association="Self.FK__events_ta__user___0D7A0286">
       <End Role="users_table" EntitySet="users_table" />
       <End Role="events_table" EntitySet="events_table" />
     </AssociationSet>
@@ -597,7 +588,7 @@
       <End Role="users_table" EntitySet="users_table" />
       <End Role="financial_support_table" EntitySet="financial_support_table" />
     </AssociationSet>
-    <AssociationSet Name="FK__shelter_t__help___3A81B327" Association="Self.FK__shelter_t__help___3A81B327">
+    <AssociationSet Name="FK__shelter_t__help___02084FDA" Association="Self.FK__shelter_t__help___02084FDA">
       <End Role="help_type_table" EntitySet="help_type_table" />
       <End Role="shelter_table" EntitySet="shelter_table" />
     </AssociationSet>
@@ -613,7 +604,7 @@
       <End Role="help_type_table" EntitySet="help_type_table" />
       <End Role="supply_table" EntitySet="supply_table" />
     </AssociationSet>
-    <AssociationSet Name="FK__shelter_t__user___398D8EEE" Association="Self.FK__shelter_t__user___398D8EEE">
+    <AssociationSet Name="FK__shelter_t__user___01142BA1" Association="Self.FK__shelter_t__user___01142BA1">
       <End Role="users_table" EntitySet="users_table" />
       <End Role="shelter_table" EntitySet="shelter_table" />
     </AssociationSet>
@@ -641,5 +632,8 @@
       <End Role="user_type_table" EntitySet="user_type_table" />
       <End Role="users_table" EntitySet="users_table" />
     </AssociationSet>
+    <FunctionImport Name="getRoles" ReturnType="Collection(String)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
 </Schema>

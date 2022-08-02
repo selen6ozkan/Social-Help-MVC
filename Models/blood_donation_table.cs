@@ -17,7 +17,6 @@ namespace WebApplication8.Models
         public int blood_donation_id { get; set; }
         public string blood_donation_title { get; set; }
         public string blood_donation_content { get; set; }
-        public System.DateTime blood_donation_date { get; set; }
         public string blood_donation_status { get; set; }
         public int user_id { get; set; }
         public int help_type_id { get; set; }
