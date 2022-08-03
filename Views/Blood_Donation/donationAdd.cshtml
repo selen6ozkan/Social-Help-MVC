@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "donationAdd";
+}
+
+
+<div class="row">
+    <div class="colxl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-title-wrapper">
+            <div class="page-title-box">
+                <h4 class="page-title">Kan Bağışı Paylaşımı</h4>
+            </div>
+            <div class="breadcrumb-list">
+                <ul>
+                    <li class="breadcrumb-link">
+                        <a href="index.html"><i class="fas fa-home mr-2"></i>Anasayfa</a>
+                    </li>
+                    <li class="breadcrumb-link active">Kan Bağışı Paylaşımı</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>@HttpContext.Current.User.Identity.Name</h3>
+
+    </div>
+
+    <div class="card-body">
+        <form action="/Blood_Donation/donationAdd" method="post" role="form">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="form-group">
+                    <label class="col-form-label">BaşlıK</label>
+                    <input class="form-control" type="text" placeholder="Başlık" name="blood_donation_title">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">İçerik</label>
+                    <input class="form-control" type="text" placeholder="İçerik" name="blood_donation_content">
+                </div>
+
+                <div class="form-group">
+                    
+                    <label class="col-form-label">Kan Grubu</label>
+                    <br />
+                    
+                    <select name="pets" id="pet-select">
+                        <option value="">Boş bırakmayınız</option>
+                        <option value="A">A Rh (+)</option>
+                        <option value="a">A Rh (-)</option>
+                        <option value="B">B Rh (+)</option>
+                        <option value="b">B Rh (-)</option>
+                        <option value="O">0 Rh (+)</option>
+                        <option value="o">0 Rh (-)</option>
+                        <option value="AB">AB Rh (+)</option>
+                        <option value="ab">AB Rh (-)</option>
+                       
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <input class="form-control" type="hidden" name="user_name" value="@HttpContext.Current.User.Identity.Name">
+                </div>
+
+                <div class="form-group mb-0">
+                    <button type="submit" class="btn btn-primary">Paylaş</button>
+
+                    <a href="/Event/Index" class="btn btn-light" data-bs-dismiss="modal">İptal</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

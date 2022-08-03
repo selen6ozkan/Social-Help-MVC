@@ -39,19 +39,8 @@ namespace WebApplication8.Controllers
             return View(list1);
            
         }
-        public ActionResult Blood_Donation(int? id)
-        {
-            blood_donation_table e = db.blood_donation_table.FirstOrDefault(x => x.blood_donation_id == id);
-
-            return View(e);
-        }
-        [HttpPost]
-        public ActionResult Blood_Donation(blood_donation_table e)
-        {
-            blood_donation_table blood = db.blood_donation_table.FirstOrDefault(x => x.blood_donation_id == e.blood_donation_id);
-
-            return RedirectToAction("Index");
-        }
+       
+        
 
 
         public ActionResult Supply(int? id)

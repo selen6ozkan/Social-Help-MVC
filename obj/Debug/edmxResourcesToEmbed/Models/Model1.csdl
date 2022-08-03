@@ -31,6 +31,7 @@
     <Property Name="blood_donation_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="help_type_id" Type="Int32" Nullable="false" />
+    <Property Name="blood_group" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="help_type_table" Relationship="Self.FK__blood_don__help___5165187F" FromRole="blood_donation_table" ToRole="help_type_table" />
     <NavigationProperty Name="users_table" Relationship="Self.FK__blood_don__user___5070F446" FromRole="blood_donation_table" ToRole="users_table" />
   </EntityType>
@@ -44,6 +45,8 @@
     <Property Name="business_help_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="user_id" Type="Int32" Nullable="false" />
     <Property Name="help_type_id" Type="Int32" Nullable="false" />
+    <Property Name="yas" Type="Int32" />
+    <Property Name="meslek" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="help_type_table" Relationship="Self.FK__business___help___4D94879B" FromRole="business_help_table" ToRole="help_type_table" />
     <NavigationProperty Name="users_table" Relationship="Self.FK__business___user___4CA06362" FromRole="business_help_table" ToRole="users_table" />
   </EntityType>

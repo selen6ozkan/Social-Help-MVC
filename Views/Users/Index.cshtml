@@ -1,0 +1,104 @@
+﻿@using WebApplication8.Models
+@model List<users_table>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="row">
+    <div class="colxl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-title-wrapper">
+            <div class="page-title-box">
+                <h3>Kullanıcılar</h3>
+
+            </div>
+            <div class="breadcrumb-list">
+                <ul>
+                    <li class="breadcrumb-link">
+                        <a href="index.html"><i class="fas fa-home mr-2"></i>Anasayfa</a>
+                    </li>
+                    <li class="breadcrumb-link active">Kullanıcılar</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ng-star-inserted">
+    <div class="row ng-star-inserted">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4 ng-star-inserted">
+
+                <div class="flip shadow-lg">
+                    <div class="content">
+                        <div class="front">
+                            <div class="card border-0 box-shadow rounded-0">
+                                <div class="card-header border-0 rounded-0 text-muted">
+                                    <h5 class="mb-0">
+                                        <i placement="bottom"
+                                           class="fa fa-user mr-2 text-inverse ng-star-inserted"></i>
+                                        @item.user_name
+                                    </h5>
+                                </div>
+                                <div class="card-body pt-1">
+                                    <div class="media">
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <img width="80"
+                                                 class="rounded-circle ng-star-inserted"
+                                                 src="~/Content/image/user2.png" />
+
+                                            <ul class="list-inline mb-0 mt-1 mx-auto fs-12 text-gray">
+                                                <li class="list-inline-item mr-0">
+                                                    <span class="fa-stack">
+                                                        <i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i>
+                                                    </span>
+                                                </li>
+                                                <li class="list-inline-item mr-0">
+                                                    <span class="fa-stack">
+                                                        <i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i>
+                                                    </span>
+                                                </li>
+                                                <li class="list-inline-item mr-0">
+                                                    <span class="fa-stack">
+                                                        <i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-google fa-stack-1x"></i>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="media-body ml-3">
+
+                                            <div class="text-gray text-right pr-0 font-italic text-truncate">
+                                                E-mail : @item.user_mail
+                                            </div>
+                                            <div class="text-gray text-right pr-0 font-italic text-truncate">
+                                                Telefon : @item.user_phone
+                                            </div>
+
+                                            <div class="text-gray text-right pr-0 font-italic text-truncate">
+                                                Cinsiyet : @item.user_gender
+                                            </div>
+
+                                            <div class="text-gray text-right pr-0 font-italic text-truncate">
+                                                Yaş : @item.user_age
+                                            </div>
+
+                                            <div class="text-gray text-right pr-0 font-italic text-truncate">
+                                                Şifre : @item.user_password
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        }
+    </div>
+
+</div>

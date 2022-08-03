@@ -20,6 +20,8 @@ namespace WebApplication8.Models
         public string business_help_status { get; set; }
         public int user_id { get; set; }
         public int help_type_id { get; set; }
+        public Nullable<int> yas { get; set; }
+        public string meslek { get; set; }
     
         public virtual help_type_table help_type_table { get; set; }
         public virtual users_table users_table { get; set; }

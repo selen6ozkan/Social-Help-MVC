@@ -20,6 +20,7 @@ namespace WebApplication8.Models
         public string blood_donation_status { get; set; }
         public int user_id { get; set; }
         public int help_type_id { get; set; }
+        public string blood_group { get; set; }
     
         public virtual help_type_table help_type_table { get; set; }
         public virtual users_table users_table { get; set; }

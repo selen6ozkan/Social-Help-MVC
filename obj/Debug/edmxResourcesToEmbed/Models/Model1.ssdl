@@ -29,6 +29,7 @@
     <Property Name="blood_donation_status" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="user_id" Type="int" Nullable="false" />
     <Property Name="help_type_id" Type="int" Nullable="false" />
+    <Property Name="blood_group" Type="varchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="business_help_table">
     <Key>
@@ -40,6 +41,8 @@
     <Property Name="business_help_status" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="user_id" Type="int" Nullable="false" />
     <Property Name="help_type_id" Type="int" Nullable="false" />
+    <Property Name="yas" Type="int" />
+    <Property Name="meslek" Type="varchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="clothes_table">
     <Key>

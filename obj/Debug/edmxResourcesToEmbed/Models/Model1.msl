@@ -31,6 +31,7 @@
           <ScalarProperty Name="blood_donation_status" ColumnName="blood_donation_status" />
           <ScalarProperty Name="user_id" ColumnName="user_id" />
           <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+          <ScalarProperty Name="blood_group" ColumnName="blood_group" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -43,6 +44,8 @@
           <ScalarProperty Name="business_help_status" ColumnName="business_help_status" />
           <ScalarProperty Name="user_id" ColumnName="user_id" />
           <ScalarProperty Name="help_type_id" ColumnName="help_type_id" />
+          <ScalarProperty Name="yas" ColumnName="yas" />
+          <ScalarProperty Name="meslek" ColumnName="meslek" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

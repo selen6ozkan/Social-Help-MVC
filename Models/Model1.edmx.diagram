@@ -4,23 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3da8cc43eaca4cdebd35466699e0ee1f" Name="Diagram1">
-        <EntityTypeShape EntityType="welfareDBModel.address_table" Width="1.5" PointX="5.25" PointY="23.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.adverts_table" Width="1.5" PointX="8.25" PointY="13" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.blood_donation_table" Width="1.5" PointX="8.25" PointY="23.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.business_help_table" Width="1.5" PointX="5.25" PointY="27.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.clothes_table" Width="1.5" PointX="8.25" PointY="19.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.education_table" Width="1.5" PointX="8.25" PointY="27.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.events_table" Width="1.5" PointX="11.25" PointY="23.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.financial_support_table" Width="1.5" PointX="11.25" PointY="19.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.help_type_table" Width="1.5" PointX="6" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.shelter_table" Width="1.5" PointX="11.25" PointY="27.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.stationary_table" Width="1.5" PointX="5.25" PointY="16.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.street_animal_table" Width="1.5" PointX="5.25" PointY="31.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.supply_table" Width="1.5" PointX="8.25" PointY="15.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.user_role_mapping" Width="1.5" PointX="5.25" PointY="20.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.user_type_table" Width="1.5" PointX="0.75" PointY="21.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.users_table" Width="1.5" PointX="3" PointY="22.25" IsExpanded="true" />
+      <Diagram DiagramId="98a1abe49ea4453b8ef29b8bc47a5f31" Name="Diagram1">
+        <EntityTypeShape EntityType="welfareDBModel.address_table" Width="1.5" PointX="5.25" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.adverts_table" Width="1.5" PointX="8.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.blood_donation_table" Width="1.5" PointX="8.25" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.business_help_table" Width="1.5" PointX="5.25" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.clothes_table" Width="1.5" PointX="8.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.education_table" Width="1.5" PointX="8.25" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.events_table" Width="1.5" PointX="11.25" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.financial_support_table" Width="1.5" PointX="11.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.help_type_table" Width="1.5" PointX="6" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.shelter_table" Width="1.5" PointX="11.25" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.stationary_table" Width="1.5" PointX="5.25" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.street_animal_table" Width="1.5" PointX="5.25" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.supply_table" Width="1.5" PointX="8.25" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.user_role_mapping" Width="1.5" PointX="5.25" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.user_type_table" Width="1.5" PointX="0.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.users_table" Width="1.5" PointX="3" PointY="22.5" IsExpanded="true" />
         <AssociationConnector Association="welfareDBModel.FK__address_t__user___2B3F6F97" ManuallyRouted="false" />
         <AssociationConnector Association="welfareDBModel.FK__adverts_t__help___5441852A" ManuallyRouted="false" />
         <AssociationConnector Association="welfareDBModel.FK__blood_don__help___5165187F" ManuallyRouted="false" />

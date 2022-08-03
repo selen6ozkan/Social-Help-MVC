@@ -26,6 +26,7 @@
     <link rel="shortcut icon"
           type="image/png"
           href="~/Content/image/favicon.png" />
+    @RenderSection("head", false)
 </head>
 
 <body>
@@ -121,7 +122,7 @@
             </div>
         </header>
         <!-- Sidebar Start -->
-        <div></div>
+        
         <aside class="sidebar-wrapper">
             <div class="logo-wrapper">
                 <a href="index.html" class="admin-logo">
@@ -150,7 +151,18 @@
                         </a>
 
                     </li>
+                    @if (User.IsInRole("ADMIN"))
+                    {
+                <li>
+                    <a href="/Users/Index">
+                        <span class="icon-menu feather-icon">
 
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </span>
+                        <span class="menu-text"> Kullanıcılar </span>
+                    </a>
+                </li>
+                }
                     <li>
                         <a href="/Adverts/Index">
                             <span class="icon-menu feather-icon">
@@ -178,56 +190,56 @@
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="/Helps/Blood_Donation">
+                                <a href="/Blood_Donation/Index">
 
                                     <span class="icon-dash"> </span>
                                     <span class="menu-text"> Kan Bağışı </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/Helps/Supply">
+                                <a href="/Supply_Help/Index">
                                     <span class="icon-dash"> </span>
                                     <span class="menu-text"> Erzak Yardımı </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/Helps/Stationary">
+                                <a href="/Stationary_Help/Index">
                                     <span class="icon-dash"> </span>
                                     <span class="menu-text"> Kırtasiye Yardımı </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/Helps/Education">
+                                <a href="/Education_Support/Index">
                                     <span class="icon-dash"> </span>
                                     <span class="menu-text"> Eğitim Bursu </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/Helps/Street_Animal_Support">
+                                <a href="/Animal_Support/Index">
                                     <span class="icon-dash"> </span>
                                     <span class="menu-text"> Hayvanlara Destek </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/Helps/Shelter">
+                                <a href="/Shelter_Help/Index">
                                     <span class="icon-dash"> </span>
                                     <span class="menu-text"> Barınma Yardımı </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/Helps/Business_Help">
+                                <a href="/Business_Support/Index">
                                     <span class="icon-dash"> </span>
                                     <span class="menu-text"> İş Yardımı </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/Helps/Financial_Support">
+                                <a href="/Financial_Support/Index">
                                     <span class="icon-dash"> </span>
                                     <span class="menu-text"> Maddi Destek </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/Helps/Clothes">
+                                <a href="/Clothes_Help/Index">
                                     <span class="icon-dash"> </span>
                                     <span class="menu-text"> Kıyafet Yardımı </span>
                                 </a>
@@ -241,9 +253,8 @@
         <div class="page-wrapper">
             <div class="main-content">
                 <!-- Page Title Start -->
-               
                 <!-- Anasayfa Start -->
-            @RenderBody()
+                @RenderBody()
 
                 <!-- Products Orders Start -->
 
@@ -253,7 +264,7 @@
             </div>
         </div>
     </div>
-
+    @RenderSection("body", false)
     <!-- Script Start -->
     <script src="~/Content/js/jquery.min.js"></script>
     <script src="~/Content/js/popper.min.js"></script>
@@ -261,10 +272,12 @@
     <script src="~/Content/js/swiper.min.js"></script>
     <script src="~/Content/js/apexchart/apexcharts.min.js"></script>
     <script src="~/Content/js/apexchart/control-chart-apexcharts.js"></script>
+
     <!-- Page Specific -->
     <script src="~/Content/js/nice-select.min.js"></script>
     <!-- Custom Script -->
     <script src="~/Content/js/custom.js"></script>
+    @RenderSection("scripts", false)
 </body>
 
 <!-- Mirrored from kamleshyadav.com/html/splashdash/HTML/bootstrep-5/splashdash-admin-template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jul 2022 10:14:03 GMT -->

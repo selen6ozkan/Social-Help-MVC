@@ -175,6 +175,38 @@
     <Content Include="Content\js\nice-select.min.js" />
     <Content Include="Content\js\popper.min.js" />
     <Content Include="Content\js\range.js" />
+    <Content Include="Content\js\required\bootstrap\bootstrap.min.js" />
+    <Content Include="Content\js\required\circloid-functions.js" />
+    <Content Include="Content\js\required\icheck.min.js" />
+    <Content Include="Content\js\required\jquery-1.11.1.min.js" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\external\jquery\jquery.js" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\animated-overlay.gif" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\ui-icons_666666_256x240.png" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\index.html" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\jquery-ui.min.css" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\jquery-ui.min.js" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\jquery-ui.structure.min.css" />
+    <Content Include="Content\js\required\jquery-ui-1.11.0.custom\jquery-ui.theme.min.css" />
+    <Content Include="Content\js\required\jquery.easing.1.3-min.js" />
+    <Content Include="Content\js\required\jquery.mCustomScrollbar.min.js" />
+    <Content Include="Content\js\required\misc\excanvas.min.js" />
+    <Content Include="Content\js\required\misc\ie10-viewport-bug-workaround.js" />
+    <Content Include="Content\js\required\misc\jquery.mousewheel-3.0.6.min.js" />
+    <Content Include="Content\js\required\misc\jquery.ui.touch-punch.min.js" />
+    <Content Include="Content\js\required\misc\modernizr.js" />
+    <Content Include="Content\js\required\misc\retina.min.js" />
     <Content Include="Content\js\script.js" />
     <Content Include="Content\js\swiper.min.js" />
     <Content Include="Content\js\tag.js" />
@@ -196,9 +228,13 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdvertsController.cs" />
+    <Compile Include="Controllers\Blood_DonationController.cs" />
+    <Compile Include="Controllers\Business_SupportController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HelpsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -300,22 +336,21 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Event\Index.cshtml" />
     <Content Include="Views\Adverts\Index.cshtml" />
-    <Content Include="Views\Helps\Blood_Donation.cshtml" />
     <Content Include="Views\Helps\Stationary.cshtml" />
     <Content Include="Views\Helps\Supply.cshtml" />
-    <Content Include="Views\Helps\Clothes.cshtml" />
-    <Content Include="Views\Helps\Financial_Support.cshtml" />
     <Content Include="Views\Helps\Shelter.cshtml" />
-    <Content Include="Views\Helps\Education.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Helps\Business_Help.cshtml" />
     <Content Include="Views\Helps\Street_Animal_Support.cshtml" />
-    <Content Include="Views\Event\EventDetail.cshtml" />
     <Content Include="Views\Event\EventAdd.cshtml" />
     <Content Include="Views\Adverts\AdvertAdd.cshtml" />
-    <Content Include="Views\Event\EventDelete.cshtml" />
+    <Content Include="Views\Blood_Donation\Index.cshtml" />
+    <Content Include="Views\Blood_Donation\donationAdd.cshtml" />
+    <Content Include="Views\Business_Support\businessAdd.cshtml" />
+    <Content Include="Views\Business_Support\Index.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Register\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
