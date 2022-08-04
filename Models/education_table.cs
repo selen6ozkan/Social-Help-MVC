@@ -17,7 +17,7 @@ namespace WebApplication8.Models
         public int education_id { get; set; }
         public string education_title { get; set; }
         public string education_content { get; set; }
-        public string education_status { get; set; }
+        public string level { get; set; }
         public int user_id { get; set; }
         public int help_type_id { get; set; }
     

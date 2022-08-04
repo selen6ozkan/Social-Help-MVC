@@ -31,7 +31,6 @@
         @foreach (var item in Model)
         {
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4 ng-star-inserted">
-
                 <div class="flip shadow-lg">
                     <div class="content">
                         <div class="front">
@@ -78,15 +77,17 @@
                                             </div>
 
                                             <div class="text-gray text-right pr-0 font-italic text-truncate">
-                                                Cinsiyet : @item.user_gender
-                                            </div>
-
-                                            <div class="text-gray text-right pr-0 font-italic text-truncate">
-                                                Yaş : @item.user_age
-                                            </div>
-
-                                            <div class="text-gray text-right pr-0 font-italic text-truncate">
                                                 Şifre : @item.user_password
+                                            </div>
+                                            <br />
+                                            <div>
+                                                <a href="#" data-userID="@item.user_id" class="btn mb-0 w-100 badge-danger userSil">
+
+
+                                                    <img src="~/Content/image/delete-user (4).png" />
+
+                                                 Kullanıcıyı Sil
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -95,10 +96,53 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         }
     </div>
-
 </div>
+
+
+
+
+@section scripts{
+
+    <script src="~/Content/js/required/jquery-1.11.1.min.js"></script>
+
+    <script>
+        $(".userSil").click(function () {
+
+            var sonuc = confirm("Kayıt silinsin mi");
+
+            if (sonuc) {
+                var userID = $(this).attr("data-userID");
+
+                $.ajax(
+                    {
+                        type: "POST",
+                        url: "/Register/Delete/" + userID,
+                        success: function () {
+
+                            alert("kayıt silindi");
+                            window.location.replace("/Users/Index");
+                        },
+                        error: function () {
+                            alert("silme sırasında hata oluştu");
+                        }
+
+
+                    });
+
+            }
+            else {
+
+                alert("Silme işlemi iptal edildi");
+            }
+
+        });
+
+
+
+
+    </script>
+
+}

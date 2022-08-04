@@ -41,7 +41,7 @@ namespace WebApplication8.Security
 
         public override string[] GetRolesForUser(string username)
         {
-            using (welfareDBEntities1 db = new welfareDBEntities1())
+            using (welfareDBEntities3 db = new welfareDBEntities3())
             {
                 var userRoles = (from u in db.users_table
                                  join r in db.user_role_mapping
@@ -53,6 +53,7 @@ namespace WebApplication8.Security
                 return userRoles;
             }
         }
+
 
 
 

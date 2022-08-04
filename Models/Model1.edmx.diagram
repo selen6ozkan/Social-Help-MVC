@@ -4,45 +4,44 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="98a1abe49ea4453b8ef29b8bc47a5f31" Name="Diagram1">
-        <EntityTypeShape EntityType="welfareDBModel.address_table" Width="1.5" PointX="5.25" PointY="23.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.adverts_table" Width="1.5" PointX="8.25" PointY="13.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.blood_donation_table" Width="1.5" PointX="8.25" PointY="23.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.business_help_table" Width="1.5" PointX="5.25" PointY="27.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.clothes_table" Width="1.5" PointX="8.25" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.education_table" Width="1.5" PointX="8.25" PointY="27.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.events_table" Width="1.5" PointX="11.25" PointY="23.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.financial_support_table" Width="1.5" PointX="11.25" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.help_type_table" Width="1.5" PointX="6" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.shelter_table" Width="1.5" PointX="11.25" PointY="27.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.stationary_table" Width="1.5" PointX="5.25" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.street_animal_table" Width="1.5" PointX="5.25" PointY="31.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.supply_table" Width="1.5" PointX="8.25" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.user_role_mapping" Width="1.5" PointX="5.25" PointY="20.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.user_type_table" Width="1.5" PointX="0.75" PointY="21.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="welfareDBModel.users_table" Width="1.5" PointX="3" PointY="22.5" IsExpanded="true" />
-        <AssociationConnector Association="welfareDBModel.FK__address_t__user___2B3F6F97" ManuallyRouted="false" />
+      <Diagram DiagramId="bf55706e543743509ec805d38c7a449c" Name="Diagram1">
+        <EntityTypeShape EntityType="welfareDBModel.adverts_table" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.blood_donation_table" Width="1.5" PointX="5.25" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.business_help_table" Width="1.5" PointX="8.25" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.clothes_table" Width="1.5" PointX="5.25" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.education_table" Width="1.5" PointX="8.25" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.events_table" Width="1.5" PointX="8.25" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.financial_support_table" Width="1.5" PointX="11.25" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.help_type_table" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.shelter_table" Width="1.5" PointX="11.25" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.stationary_table" Width="1.5" PointX="11.25" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.street_animal_table" Width="1.5" PointX="5.25" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.supply_table" Width="1.5" PointX="5.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.user_role_mapping" Width="1.5" PointX="5.25" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.user_type_table" Width="1.5" PointX="0.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="welfareDBModel.users_table" Width="1.5" PointX="3" PointY="20.125" IsExpanded="true" />
         <AssociationConnector Association="welfareDBModel.FK__adverts_t__help___5441852A" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__blood_don__help___5165187F" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__blood_don__user___5070F446" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__business___help___4D94879B" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__business___user___4CA06362" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__clothes_t__help___49C3F6B7" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__clothes_t__user___48CFD27E" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__education__help___45F365D3" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__education__user___44FF419A" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__events_ta__help___0E6E26BF" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__events_ta__user___0D7A0286" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__financial__help___3E52440B" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__financial__user___3D5E1FD2" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__shelter_t__help___02084FDA" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__stationar__help___36B12243" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__street_an__help___32E0915F" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__supply_ta__help___2F10007B" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__shelter_t__user___01142BA1" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__stationar__user___35BCFE0A" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__street_an__user___31EC6D26" ManuallyRouted="false" />
-        <AssociationConnector Association="welfareDBModel.FK__supply_ta__user___2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__blood_don__help___3D2915A8" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__blood_don__user___3C34F16F" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__business___help___40F9A68C" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__business___user___40058253" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__clothes_t__help___5BAD9CC8" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__clothes_t__user___5AB9788F" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__education__help___607251E5" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__education__user___5F7E2DAC" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__events_ta__help___44CA3770" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__events_ta__user___43D61337" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__financial__help___489AC854" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__financial__user___47A6A41B" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__shelter_t__help___4C6B5938" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__stationar__help___503BEA1C" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__street_an__help___540C7B00" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__supply_ta__help___57DD0BE4" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__shelter_t__user___4B7734FF" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__stationar__user___4F47C5E3" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__street_an__user___531856C7" ManuallyRouted="false" />
+        <AssociationConnector Association="welfareDBModel.FK__supply_ta__user___56E8E7AB" ManuallyRouted="false" />
         <AssociationConnector Association="welfareDBModel.FK__user_role__user___6477ECF3" ManuallyRouted="false" />
         <AssociationConnector Association="welfareDBModel.FK__user_role__user___656C112C" ManuallyRouted="false" />
         <AssociationConnector Association="welfareDBModel.FK__users_tab__user___286302EC" ManuallyRouted="false" />

@@ -45,15 +45,13 @@
 
                         @foreach (help_type_table item in ViewBag.helps)
                         {
+
                             <option value="@item.help_type_id">@item.help_type</option>
                         }
                     </select>
 
                     <br />
-                    <div class="checkbox">
-                        <input checked="checked" type="checkbox" id="status" name="events_status" value="status">
-                        <label for="status">Beklemede</label>
-                    </div>
+                    
                     <br />
                     <div class="form-group mb-0">
                         <a href="Adverts/Index" class="btn btn-primary" type="button">Paylaş</a>

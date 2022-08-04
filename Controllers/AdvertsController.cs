@@ -9,7 +9,7 @@ namespace WebApplication8.Controllers
 {
     public class AdvertsController : Controller
     {
-        welfareDBEntities1 db = new welfareDBEntities1();
+        welfareDBEntities3 db = new welfareDBEntities3();
         // GET: Adverts
         [HttpGet]
         [Authorize(Roles = "ADMIN,KULLANICI")]
@@ -17,15 +17,21 @@ namespace WebApplication8.Controllers
         public ActionResult Index()
 
         {
-            
-            List<users_table> users = db.users_table.ToList();
-            List<adverts_table> adverts = db.adverts_table.ToList();
 
-            List<help_type_table> helps = db.help_type_table.ToList();
+            ViewModel viewModel = new ViewModel();
+            viewModel.Blood = db.blood_donation_table.ToList();
+            viewModel.Business = db.business_help_table.ToList();
+            viewModel.Clothes = db.clothes_table.ToList();
+            viewModel.Education = db.education_table.ToList();
+            viewModel.Event = db.events_table.ToList();
+            viewModel.Financial = db.financial_support_table.ToList();
+            viewModel.Shelter = db.shelter_table.ToList();
+            viewModel.Stationary = db.stationary_table.ToList();
+            viewModel.Animal = db.street_animal_table.ToList();
+            viewModel.Supply = db.supply_table.ToList();
+            viewModel.User = db.users_table.ToList();
 
-            ViewBag.user = helps;
-            ViewBag.user = users;
-            return View(adverts);
+            return View(viewModel);
         }
 
         public ActionResult AdvertAdd()

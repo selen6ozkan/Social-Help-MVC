@@ -17,7 +17,6 @@ namespace WebApplication8.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public users_table()
         {
-            this.address_table = new HashSet<address_table>();
             this.blood_donation_table = new HashSet<blood_donation_table>();
             this.business_help_table = new HashSet<business_help_table>();
             this.clothes_table = new HashSet<clothes_table>();
@@ -34,14 +33,10 @@ namespace WebApplication8.Models
         public int user_id { get; set; }
         public string user_name { get; set; }
         public string user_mail { get; set; }
-        public string user_password { get; set; }
         public string user_phone { get; set; }
-        public string user_gender { get; set; }
-        public int user_age { get; set; }
         public int user_type_id { get; set; }
+        public string user_password { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<address_table> address_table { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<blood_donation_table> blood_donation_table { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

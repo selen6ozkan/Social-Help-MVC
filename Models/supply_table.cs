@@ -17,7 +17,6 @@ namespace WebApplication8.Models
         public int supply_id { get; set; }
         public string supply_title { get; set; }
         public string supply_content { get; set; }
-        public string supply_status { get; set; }
         public int user_id { get; set; }
         public int help_type_id { get; set; }
     

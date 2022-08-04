@@ -10,18 +10,10 @@
 namespace WebApplication8.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class address_table
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int address_id { get; set; }
-        public string city { get; set; }
-        public string country { get; set; }
-        public string neighbourhood { get; set; }
-        public string street { get; set; }
-        public string building_no { get; set; }
-        public int user_id { get; set; }
-    
-        public virtual users_table users_table { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

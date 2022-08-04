@@ -17,7 +17,6 @@ namespace WebApplication8.Models
         public int shelter_id { get; set; }
         public string shelter_title { get; set; }
         public string shelter_content { get; set; }
-        public string shelter_status { get; set; }
         public int user_id { get; set; }
         public int help_type_id { get; set; }
     

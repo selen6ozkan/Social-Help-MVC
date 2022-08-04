@@ -10,7 +10,7 @@ namespace WebApplication8.Controllers
 
     public class Blood_DonationController : Controller
     {
-        welfareDBEntities1 db = new welfareDBEntities1();
+        welfareDBEntities3 db = new welfareDBEntities3();
         [HttpGet]
         [Authorize(Roles = "ADMIN,KULLANICI")]
         [AllowAnonymous]
@@ -22,6 +22,21 @@ namespace WebApplication8.Controllers
         }
         public ActionResult donationAdd()
         {
+
+            List<SelectListItem> grup = new List<SelectListItem>()
+            {
+                        new SelectListItem{ Text="A Rh (+)"},
+                        new SelectListItem{ Text="A Rh (-)"},
+                        new SelectListItem{ Text="B Rh (+)"},
+                        new SelectListItem{ Text="B Rh (-)"},
+                        new SelectListItem{ Text="0 Rh (+)"},
+                        new SelectListItem{ Text="0 Rh (-)"},
+                        new SelectListItem{ Text="AB Rh (+)" },
+                        new SelectListItem{ Text="AB Rh (-)"},
+                       
+             };
+            TempData["grup"] = grup;
+
             ViewBag.bd = db.blood_donation_table.ToList();
 
             return View();
@@ -31,7 +46,6 @@ namespace WebApplication8.Controllers
         {
             users_table u = db.users_table.FirstOrDefault(x => x.user_name == user_name);
             blood_donation_table bd = db.blood_donation_table.FirstOrDefault(x => x.blood_donation_id == blood_donation_id);
-            e.blood_donation_status = "Beklemede";
             e.help_type_id = 1;
             e.user_id = u.user_id;
             db.blood_donation_table.Add(e);

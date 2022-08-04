@@ -1,0 +1,60 @@
+﻿@using WebApplication8.Models
+@model List<stationary_table>
+@{
+    ViewBag.Title = "stationaryAdd";
+}
+<div class="row">
+    <div class="colxl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-title-wrapper">
+            <div class="page-title-box">
+                <h4 class="page-title">Kırtasiye Yardımı Yap</h4>
+            </div>
+            <div class="breadcrumb-list">
+                <ul>
+                    <li class="breadcrumb-link">
+                        <a href="/Home/Index"><i class="fas fa-home mr-2"></i>Anasayfa</a>
+                    </li>
+                    <li class="breadcrumb-link active">Kırtasiye Yardımı Yap</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>@HttpContext.Current.User.Identity.Name</h3>
+
+    </div>
+
+    <div class="card-body">
+        <form action="/Stationary/stationaryAdd" method="post" role="form">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="form-group">
+                    <label class="col-form-label">Paket</label><br />
+
+                    @Html.DropDownList("packet", (IEnumerable
+          <SelectListItem>)TempData["pecket"])
+                    <br />
+                    <label class="col-form-label">Başlık</label><br />
+                    <input class="form-control" type="text" placeholder="Başlık" name="stationary_title">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">İçerik</label>
+                    <input class="form-control" type="text" placeholder="İçerik" name="stationary_content">
+                </div>
+              
+                <div class="form-group">
+
+                    <input class="form-control" type="hidden" placeholder=" " name="user_name" value="@HttpContext.Current.User.Identity.Name">
+                </div>
+
+                <div class="form-group mb-0">
+                    <button type="submit" class="btn btn-primary">Kırtasiye Yardımı Yap</button>
+
+                    <a href="/Stationary/Index" class="btn btn-light" data-bs-dismiss="modal">İptal</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -10,57 +10,45 @@ namespace WebApplication8.Controllers
     public class RegisterController : Controller
     {
         // GET: Register
-        welfareDBEntities1 db = new welfareDBEntities1();
+        welfareDBEntities3 db = new welfareDBEntities3();
         [HttpGet]
+        [Authorize(Roles = "ADMIN,KULLANICI")]
         [AllowAnonymous]
 
         public ActionResult Register()
         {
             List<users_table> users = db.users_table.ToList();
 
-            List<SelectListItem> cinsiyet = new List<SelectListItem>()
-            {
-                        new SelectListItem{ Text="Kadın"},
-                        new SelectListItem{ Text="Erkek"},
-                        
-             };
-            TempData["cinsiyet"] = cinsiyet;
-
-
             return View(users);
         }
         [HttpPost]  
         [AllowAnonymous]
-        public ActionResult Register(users_table _user)
+        public ActionResult Register(FormCollection form)
         {
-       
-            if (ModelState.IsValid)
-            {
-                var check = db.users_table.FirstOrDefault(s => s.user_mail == _user.user_mail);
-                if (check == null)
-                {
-                    _user.user_password = GetMD5(_user.user_password);
-                    db.Configuration.ValidateOnSaveEnabled = false;
-                    db.users_table.Add(_user);
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-                else
-                {
-                    ViewBag.error = "Bu e-mail zaten var.";
-                    return View();
-                }
 
 
-            }
+            welfareDBEntities3 db=new welfareDBEntities3();
+            users_table users = new users_table(); 
+            users.user_name = form["user_name"].Trim();
+            users.user_mail = form["user_mail"].Trim();
+            users.user_phone = form["user_phone"].Trim();
+            users.user_password = form["user_password"].Trim();
+            users.user_type_id = 1003;
+            db.users_table.Add(users);
+            db.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
 
-            return View(db);
+
+        [Authorize(Roles = "ADMIN")]
+        [AllowAnonymous]
+        public void Delete(int? id)
+        {
+            users_table r = db.users_table.FirstOrDefault(x => x.user_id == id);
+            db.users_table.Remove(r);
+            db.SaveChanges();
 
         }
 
-        private string GetMD5(string user_password)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

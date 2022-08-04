@@ -41,22 +41,13 @@
                 </div>
 
                 <div class="form-group">
-                    
+
                     <label class="col-form-label">Kan Grubu</label>
                     <br />
-                    
-                    <select name="pets" id="pet-select">
-                        <option value="">Boş bırakmayınız</option>
-                        <option value="A">A Rh (+)</option>
-                        <option value="a">A Rh (-)</option>
-                        <option value="B">B Rh (+)</option>
-                        <option value="b">B Rh (-)</option>
-                        <option value="O">0 Rh (+)</option>
-                        <option value="o">0 Rh (-)</option>
-                        <option value="AB">AB Rh (+)</option>
-                        <option value="ab">AB Rh (-)</option>
-                       
-                    </select>
+
+
+                    @Html.DropDownList("grup", (IEnumerable
+          <SelectListItem>)TempData["grup"])
 
                 </div>
 

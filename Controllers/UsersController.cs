@@ -10,7 +10,7 @@ namespace WebApplication8.Controllers
     public class UsersController : Controller
     {
         // GET: Users
-        welfareDBEntities1 db = new welfareDBEntities1();
+        welfareDBEntities3 db = new welfareDBEntities3();
         [HttpGet]
         [Authorize(Roles = "ADMIN")]
         [AllowAnonymous]
@@ -19,5 +19,7 @@ namespace WebApplication8.Controllers
             List<users_table> users = db.users_table.ToList();
             return View(users);
         }
+
+
     }
 }

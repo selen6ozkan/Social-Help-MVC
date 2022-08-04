@@ -17,11 +17,10 @@ namespace WebApplication8.Models
         public int business_help_id { get; set; }
         public string business_help_title { get; set; }
         public string business_help_content { get; set; }
-        public string business_help_status { get; set; }
+        public string job { get; set; }
+        public int year { get; set; }
         public int user_id { get; set; }
         public int help_type_id { get; set; }
-        public Nullable<int> yas { get; set; }
-        public string meslek { get; set; }
     
         public virtual help_type_table help_type_table { get; set; }
         public virtual users_table users_table { get; set; }

@@ -10,7 +10,7 @@ namespace WebApplication8.Controllers
     public class Business_SupportController : Controller
     {
         // GET: Business_Support
-        welfareDBEntities1 db = new welfareDBEntities1();
+        welfareDBEntities3 db = new welfareDBEntities3();
         [HttpGet]
         [Authorize(Roles = "ADMIN,KULLANICI")]
         [AllowAnonymous]
@@ -22,7 +22,7 @@ namespace WebApplication8.Controllers
         }
         public ActionResult businessAdd()
         {
-            List<SelectListItem> meslek = new List<SelectListItem>()
+            List<SelectListItem> job = new List<SelectListItem>()
             {
                         new SelectListItem{ Text="Avukat"},
                         new SelectListItem{ Text="Doktor"},
@@ -35,9 +35,9 @@ namespace WebApplication8.Controllers
                         new SelectListItem{ Text="Bankacı"},
                         new SelectListItem{ Text="Sekreter"},
              };
-            TempData["meslek"] = meslek;
+            TempData["job"] = job;
 
-            ViewBag.Yas = new SelectList(Enumerable.Range(0, 30));
+            ViewBag.year = new SelectList(Enumerable.Range(0, 30));
             ViewBag.bh = db.business_help_table.ToList();
             return View();  
         }
@@ -47,7 +47,6 @@ namespace WebApplication8.Controllers
 
             users_table u = db.users_table.FirstOrDefault(x => x.user_name == user_name);
             business_help_table b= db.business_help_table.FirstOrDefault(x => x.business_help_id == business_help_id);
-            e.business_help_status = "Beklemede";
             e.help_type_id = 2;
             e.user_id = u.user_id;
             db.business_help_table.Add(e);

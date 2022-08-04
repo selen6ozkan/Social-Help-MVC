@@ -1,4 +1,4 @@
-﻿@using WebApplication8.Models
+﻿@using WebApplication8.Models 
 @model List<blood_donation_table>
 @{
     ViewBag.Title = "Index";
@@ -62,14 +62,9 @@
                                     </td>
                                     <td>@item.blood_donation_title</td>
                                     <td>@item.blood_donation_content</td>
-                                    @if (item.blood_group != null)
-                                    {
-                                        <td>@item.blood_group</td>
-                                    }
-                                    else
-                                    {
-                                        <td>hata</td>
-                                    }
+                                    
+                                  
+                                 
 
                                     @if (User.IsInRole("ADMIN"))
                                     {

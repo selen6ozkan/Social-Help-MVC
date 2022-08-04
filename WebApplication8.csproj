@@ -50,6 +50,9 @@
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Scrypt, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Scrypt.NET.1.3.0\lib\net20\Scrypt.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -112,20 +115,39 @@
     <Content Include="Content\fonts\webfonts\fa-brands-400.svg" />
     <Content Include="Content\fonts\webfonts\fa-regular-400.svg" />
     <Content Include="Content\fonts\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\image\animal.jpg" />
     <Content Include="Content\image\auth-bg.png" />
     <Content Include="Content\image\auth-img1.png" />
     <Content Include="Content\image\backgroundshape.png" />
+    <Content Include="Content\image\blood-banks-2.png" />
     <Content Include="Content\image\blood-donation.png" />
+    <Content Include="Content\image\blood-type.png" />
     <Content Include="Content\image\blood.jfif" />
+    <Content Include="Content\image\clothes.jpg" />
     <Content Include="Content\image\cost.png" />
+    <Content Include="Content\image\delete %281%29.png" />
+    <Content Include="Content\image\delete %282%29.png" />
+    <Content Include="Content\image\delete %283%29.png" />
+    <Content Include="Content\image\delete-user %284%29.png" />
+    <Content Include="Content\image\delete.png" />
+    <Content Include="Content\image\download %281%29.png" />
+    <Content Include="Content\image\download %283%29.png" />
+    <Content Include="Content\image\download.jfif" />
+    <Content Include="Content\image\download.png" />
+    <Content Include="Content\image\Ekran Alıntısı.PNG" />
     <Content Include="Content\image\error.png" />
     <Content Include="Content\image\favicon.html" />
     <Content Include="Content\image\favicon.png" />
+    <Content Include="Content\image\hand-drawn-illustration-of-clothes-donate-charity-care-concept-doodle-sketch-style-elements-of-clothes-donation-box-for-logotype-banner-icon-design-vector-illustration-2APE330.jpg" />
     <Content Include="Content\image\happy-striker.png" />
+    <Content Include="Content\image\images %281%29.png" />
+    <Content Include="Content\image\images %282%29.png" />
+    <Content Include="Content\image\images.png" />
     <Content Include="Content\image\loader.gif" />
     <Content Include="Content\image\logo.png" />
     <Content Include="Content\image\logo2.png" />
     <Content Include="Content\image\mini_logo.png" />
+    <Content Include="Content\image\newsletter_header_biz_support.jpg" />
     <Content Include="Content\image\o_icon.png" />
     <Content Include="Content\image\o_icon2.png" />
     <Content Include="Content\image\o_icon3.png" />
@@ -140,6 +162,8 @@
     <Content Include="Content\image\sort_both.png" />
     <Content Include="Content\image\sort_desc.png" />
     <Content Include="Content\image\sort_desc_disabled.png" />
+    <Content Include="Content\image\stationary.jpg" />
+    <Content Include="Content\image\Supply.png" />
     <Content Include="Content\image\table\1.jpg" />
     <Content Include="Content\image\table\2.jpg" />
     <Content Include="Content\image\table\3.jpg" />
@@ -228,18 +252,22 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdvertsController.cs" />
+    <Compile Include="Controllers\Animal_SupportController.cs" />
     <Compile Include="Controllers\Blood_DonationController.cs" />
     <Compile Include="Controllers\Business_SupportController.cs" />
+    <Compile Include="Controllers\ClothesController.cs" />
+    <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="Controllers\Financial_SupportController.cs" />
     <Compile Include="Controllers\HelpsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\ShelterController.cs" />
+    <Compile Include="Controllers\StationaryController.cs" />
+    <Compile Include="Controllers\SupplyController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Models\address_table.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\adverts_table.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -283,6 +311,12 @@
     <Compile Include="Models\shelter_table.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\stationary_table.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -290,6 +324,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\supply_table.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\users_table.cs">
@@ -301,6 +338,7 @@
     <Compile Include="Models\user_type_table.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\MyAuthorization.cs" />
     <Compile Include="Security\MyRoles.cs" />
@@ -336,13 +374,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Event\Index.cshtml" />
     <Content Include="Views\Adverts\Index.cshtml" />
-    <Content Include="Views\Helps\Stationary.cshtml" />
-    <Content Include="Views\Helps\Supply.cshtml" />
-    <Content Include="Views\Helps\Shelter.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Helps\Street_Animal_Support.cshtml" />
     <Content Include="Views\Event\EventAdd.cshtml" />
     <Content Include="Views\Adverts\AdvertAdd.cshtml" />
     <Content Include="Views\Blood_Donation\Index.cshtml" />
@@ -351,6 +385,20 @@
     <Content Include="Views\Business_Support\Index.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Register\Register.cshtml" />
+    <Content Include="Views\Clothes\clothesAdd.cshtml" />
+    <Content Include="Views\Clothes\Index.cshtml" />
+    <Content Include="Views\Financial_Support\Index.cshtml" />
+    <Content Include="Views\Financial_Support\financialAdd.cshtml" />
+    <Content Include="Views\Education\Index.cshtml" />
+    <Content Include="Views\Education\educationAdd.cshtml" />
+    <Content Include="Views\Shelter\Index.cshtml" />
+    <Content Include="Views\Shelter\shelterAdd.cshtml" />
+    <Content Include="Views\Stationary\Index.cshtml" />
+    <Content Include="Views\Stationary\stationaryAdd.cshtml" />
+    <Content Include="Views\Animal_Support\Index.cshtml" />
+    <Content Include="Views\Animal_Support\animalAdd.cshtml" />
+    <Content Include="Views\Supply\Index.cshtml" />
+    <Content Include="Views\Supply\supplyAdd.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

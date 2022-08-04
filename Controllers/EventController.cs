@@ -11,7 +11,7 @@ namespace WebApplication8.Controllers
     public class EventController : Controller
     {
         // GET: Event
-        welfareDBEntities1 db=new welfareDBEntities1();   
+        welfareDBEntities3 db=new welfareDBEntities3();   
         [HttpGet]
         [Authorize(Roles = "ADMIN,KULLANICI")]
         [AllowAnonymous]
@@ -36,7 +36,7 @@ namespace WebApplication8.Controllers
         {
             users_table u = db.users_table.FirstOrDefault(x=>x.user_name == user_name);
             events_table ev = db.events_table.FirstOrDefault(x => x.events_id == events_id);
-            e.event_status="Beklemde";
+            e.help_type_id = 5;
             e.user_id = u.user_id;
             db.events_table.Add(e);
             _ = db.SaveChanges();

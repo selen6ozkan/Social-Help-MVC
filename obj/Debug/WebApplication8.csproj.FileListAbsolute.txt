@@ -80,3 +80,4 @@ C:\Users\SELEN\source\repos\WebApplication8\obj\Debug\WebApplication8.csproj.Cor
 C:\Users\SELEN\source\repos\WebApplication8\obj\Debug\WebApplication8.csproj.CopyComplete
 C:\Users\SELEN\source\repos\WebApplication8\obj\Debug\WebApplication8.dll
 C:\Users\SELEN\source\repos\WebApplication8\obj\Debug\WebApplication8.pdb
+C:\Users\SELEN\source\repos\WebApplication8\bin\Scrypt.dll

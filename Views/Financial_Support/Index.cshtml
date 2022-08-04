@@ -1,0 +1,153 @@
+﻿@using WebApplication8.Models
+@model List<financial_support_table>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="colxl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-title-wrapper">
+            <div class="page-title-box">
+                <a href="/Financial_Support/financialAdd" class="btn btn-primary">Paylaş</a>
+
+            </div>
+            <div class="breadcrumb-list">
+                <ul>
+                    <li class="breadcrumb-link">
+                        <a href="/Home/Index"><i class="fas fa-home mr-2"></i>Anasayfa</a>
+                    </li>
+                    <li class="breadcrumb-link active">Maddi Destek</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="card chart-card">
+            <div class="card-body pb-4">
+                <div class="chart-holder">
+                    <div class="table-responsive">
+                        <table class="table table-styled mb-0">
+                            <thead>
+
+                                <tr>
+                                    <th>Kullanıcı Adı</th>
+                                    <th>Başlık</th>
+                                    <th>İçerik</th>
+                                    
+                                    @if (User.IsInRole("ADMIN"))
+                                    {
+                                        <th>Güncelle</th>
+                                        <th>Sil</th>
+                                    }
+
+
+                                </tr>
+
+
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            <span class="img-thumb">
+                                                <img src="~/Content/image/table/1.jpg" alt=" " />
+                                                <span class="ml-2">@item.users_table.user_name</span>
+                                            </span>
+                                        </td>
+                                        <td>@item.financial_support_title</td>
+                                        <td>@item.financial_support_content</td>
+                                        
+
+
+
+                                        @if (User.IsInRole("ADMIN"))
+                                        {
+
+                                            <td>
+                                                <a href="/Financial_Support/financialAdd" class="btn mb-0 w-100 badge-primary">
+
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="16px">
+                                                        <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M14.766,14.570 L11.069,10.609 C12.020,9.445 12.540,7.981 12.540,6.456 C12.540,2.894 9.727,-0.002 6.269,-0.002 C2.812,-0.002 -0.002,2.894 -0.002,6.456 C-0.002,10.018 2.812,12.916 6.269,12.916 C7.567,12.916 8.804,12.512 9.862,11.747 L13.587,15.738 C13.742,15.905 13.952,15.997 14.176,15.997 C14.389,15.997 14.590,15.914 14.743,15.761 C15.068,15.439 15.078,14.904 14.766,14.570 ZM6.269,1.682 C8.825,1.682 10.904,3.823 10.904,6.456 C10.904,9.090 8.825,11.231 6.269,11.231 C3.714,11.231 1.634,9.090 1.634,6.456 C1.634,3.823 3.714,1.682 6.269,1.682 Z"></path>
+                                                    </svg>
+                                                    Güncelle
+                                                </a>
+
+                                            </td>
+
+                                            <td>
+                                                <a href="#" data-fnclID="@item.financial_support_id" class="btn mb-0 w-100 badge-danger fnclSil">
+
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="16px">
+                                                        <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M14.766,14.570 L11.069,10.609 C12.020,9.445 12.540,7.981 12.540,6.456 C12.540,2.894 9.727,-0.002 6.269,-0.002 C2.812,-0.002 -0.002,2.894 -0.002,6.456 C-0.002,10.018 2.812,12.916 6.269,12.916 C7.567,12.916 8.804,12.512 9.862,11.747 L13.587,15.738 C13.742,15.905 13.952,15.997 14.176,15.997 C14.389,15.997 14.590,15.914 14.743,15.761 C15.068,15.439 15.078,14.904 14.766,14.570 ZM6.269,1.682 C8.825,1.682 10.904,3.823 10.904,6.456 C10.904,9.090 8.825,11.231 6.269,11.231 C3.714,11.231 1.634,9.090 1.634,6.456 C1.634,3.823 3.714,1.682 6.269,1.682 Z"></path>
+                                                    </svg>
+                                                    Sil
+                                                </a>
+
+                                            </td>
+                                        }
+
+
+                                    </tr>
+                                }
+
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <script src="~/Content/js/required/jquery-1.11.1.min.js"></script>
+
+    <script>
+        $(".fnclSil").click(function () {
+
+                    var sonuc = confirm("Kayıt silinsin mi");
+
+                    if (sonuc) {
+                        var fnclID = $(this).attr("data-fnclID");
+
+                        $.ajax(
+                            {
+                                type: "POST",
+                                url: "/Financial_Support/Delete/" + fnclID,
+                                success: function () {
+
+                                    alert("kayıt silindi");
+                                    window.location.replace("/Financial_Support/Index");
+                                },
+                                error: function () {
+                                    alert("silme sırasında hata oluştu");
+                                }
+
+
+                            });
+
+                    }
+                    else {
+
+                        alert("Silme işlemi iptal edildi");
+                    }
+
+                });
+
+
+
+
+    </script>
+
+}
+
+
